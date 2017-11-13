@@ -1,2 +1,6 @@
 composer.env
-/magento/
+/magento/*
+!/magento/app
+/magento/app/*
+!/magento/app/code/
+.idea/

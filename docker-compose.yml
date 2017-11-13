@@ -7,7 +7,7 @@ services:
       - VIRTUAL_PORT=80
       - HTTPS_METHOD=noredirect
     ports:
-      - 80
+        - 80:80
     links:
       - web
 
@@ -23,9 +23,9 @@ services:
     env_file:
       - ./global.env
     #environment:
-      #- VIRTUAL_HOST=magento2.docker
-      #- VIRTUAL_PORT=80
-      #- HTTPS_METHOD=noredirect
+    #  - VIRTUAL_HOST=magento2.docker
+    #  - VIRTUAL_PORT=80
+    #  - HTTPS_METHOD=noredirect
 
   fpm:
     hostname: fpm.magento2.docker
@@ -79,7 +79,7 @@ services:
       - M2SETUP_ADMIN_USER=admin
       - M2SETUP_ADMIN_PASSWORD=password1
       - M2SETUP_VERSION=2.1.*
-      # - M2SETUP_USE_SAMPLE_DATA=true
+      - M2SETUP_USE_SAMPLE_DATA=true
 
   cron:
     image: meanbee/magento2-php:7.0-cli
