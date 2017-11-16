@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dev" translate="label" showInDefault="1">
+            <group id="technodelight_symfonydebug" translate="label" showInDefault="1">
+                <label>Technodelight Symfony Debug Options</label>
+                <field id="enabled" translate="label" type="select" showInDefault="1">
+                    <label>Enable module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="file_link_format" translate="label" type="text" showInDefault="1">
+                    <label>File link format</label>
+                </field>
+                <field id="path_maps" translate="label comment" type="textarea" showInDefault="1">
+                    <label>Map server path to local when rendering file links</label>
+                    <comment>Add one mapping to each row (from:to). Use the operating system's path separator (: on
+                        linux)
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
