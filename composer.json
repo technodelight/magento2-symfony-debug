@@ -21,7 +21,7 @@
   "require": {
     "php": ">=7.0",
     "magento/framework": "^100.1"
-  }
+  },
   "config": {
     "bin-dir": "bin",
     "use-include-path": true
